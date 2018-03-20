@@ -20,13 +20,14 @@ func main() {
 	outBase := os.Args[2]
 
 	//readFile.Read(inFile, uidPresent, classPresent)
+	fmt.Println("Reading the data")
 	myData := readFile.Read(inFile, true, true)
 
 	//DecisionForest.GenForest(allData, numClasses, numTrees, printRes, writeTrees, readTrees, outBase)
 	//Uncomment the following lines to test data
-	//fmt.Println("Testing the forest")
-	//DecisionForest.GenForest(myData, NUMCLASSES, NUMTREES, true, false, true, outBase)
+	fmt.Println("Testing the forest")
+	DecisionForest.GenForest(myData, NUMCLASSES, NUMTREES, true, false, true, outBase)
 	//Uncomment the following lines to train the forest
-	fmt.Println("Training the forest")
-	DecisionForest.GenForest(myData, NUMCLASSES, NUMTREES, false, true, false, outBase)
+	//fmt.Println("Training the forest")
+	//DecisionForest.GenForest(myData, NUMCLASSES, NUMTREES, true, true, false, outBase)
 }
